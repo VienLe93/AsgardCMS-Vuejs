@@ -12,5 +12,6 @@ npm-debug.log
 yarn-error.log
 .env
 composer.lock
-.DS_Store
+package-lock.json
 .php_cs.cache
+.DS_Store
