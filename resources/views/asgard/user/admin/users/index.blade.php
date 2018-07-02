@@ -4,6 +4,7 @@
 @stop
 
 @section('content')
+abc
 @stop
 
 @section('footer')
