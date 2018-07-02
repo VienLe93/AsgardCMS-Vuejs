@@ -10,6 +10,7 @@ use Modules\User\Http\Requests\UpdateUserRequest;
 use Modules\User\Permissions\PermissionManager;
 use Modules\User\Repositories\RoleRepository;
 use Modules\User\Repositories\UserRepository;
+use Modules\User\Entities\Sentinel\User;
 
 class UserController extends BaseUserModuleController
 {
@@ -53,7 +54,8 @@ class UserController extends BaseUserModuleController
      */
     public function index()
     {
-        return view('user::admin.users.index');
+        $users = User::whereNotNull('permissions')->get();
+        return view('user::admin.users.index',['users']);
     }
 
     /**
