@@ -4,6 +4,7 @@
 @stop
 
 @section('content')
+abc
 @stop
 
 @section('footer')
@@ -12,6 +13,9 @@
 @section('shortcuts')
     <dl class="dl-horizontal">
         <dt><code>c</code></dt>
-        <dd>{{ trans('user::users.button.new-user') }}</dd>
+        <dd>{{ trans('page::pages.create page') }}</dd>
     </dl>
 @stop
+
+@push('js-stack')
+@endpush
