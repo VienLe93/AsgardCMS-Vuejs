@@ -6,7 +6,7 @@ return [
    | The prefix that'll be used for the administration
    |--------------------------------------------------------------------------
    */
-    'admin-prefix' => 'backend',
+    'admin-prefix' => 'admin',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     | Backend and Frontend routes.
     */
     'middleware' => [
-       'backend' => [
+       'admin' => [
            'auth.admin',
        ],
        'frontend' => [
