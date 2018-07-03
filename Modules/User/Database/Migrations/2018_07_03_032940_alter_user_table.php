@@ -20,9 +20,9 @@ class AlterUserTable extends Migration
             $table->string('address')->nullable()->after('avatar');
             $table->integer('post_code')->nullable()->after('address');
             $table->string('phone')->nullable()->after('post_code');
-            $table->boolean('ambassador')->nullable()->after('phone');
-            $table->boolean('club')->nullable()->after('ambassador');
-            $table->boolean('status')->nullable()->after('club');
+            $table->boolean('ambassador')->default(0)->nullable()->after('phone');
+            $table->boolean('club')->default(0)->nullable()->after('ambassador');
+            $table->boolean('status')->default(0)->nullable()->after('club');
             $table->enum('type', [1,2])->default(1)->nullable()->after('status');
             $table->tinyInteger('newsletter')->nullable()->after('type');
         });
@@ -36,15 +36,15 @@ class AlterUserTable extends Migration
     public function down()
     {
         Schema::table('users', function (Blueprint $table) {
-            $table->dropColumn('avatar')->nullable()->after('last_name')->change();
-            $table->dropColumn('address')->nullable()->after('avatar');
-            $table->dropColumn('post_code')->nullable()->after('address');
-            $table->dropColumn('phone')->nullable()->after('post_code');
-            $table->dropColumn('ambassador')->nullable()->after('phone');
-            $table->dropColumn('club')->nullable()->after('ambassador');
-            $table->dropColumn('status')->nullable()->after('club');
-            $table->dropColumn('type', [1,2])->default(1)->nullable()->after('status');
-            $table->dropColumn('newsletter')->nullable()->after('type');
+            $table->dropColumn('avatar');
+            $table->dropColumn('address');
+            $table->dropColumn('post_code');
+            $table->dropColumn('phone');
+            $table->dropColumn('ambassador');
+            $table->dropColumn('club');
+            $table->dropColumn('status');
+            $table->dropColumn('type');
+            $table->dropColumn('newsletter');
         });
     }
 }

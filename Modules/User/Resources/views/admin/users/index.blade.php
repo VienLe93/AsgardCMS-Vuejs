@@ -27,10 +27,13 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>{{ trans('user::users.table.full-name') }}</th>
+                                <th>{{ trans('user::users.table.first-name') }}</th>
+                                <th>{{ trans('user::users.table.last-name') }}</th>
                                 <th>{{ trans('user::users.table.email') }}</th>
-                                <th>{{ trans('user::users.table.avatar') }}</th>
-                                <th>{{ trans('user::users.table.civility') }}</th>
+                                <th>{{ trans('user::users.table.club') }}</th>
+                                <th>{{ trans('user::users.table.ambassador') }}</th>
+                                <th>{{ trans('user::users.table.type') }}</th>
+                                <th>{{ trans('user::users.table.status') }}</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -41,12 +44,43 @@
                             <tr>
                                 <td>
                                   <a href="{{ route('admin.user.user.edit', [$user->id]) }}">
-                                      {{ $user->first_name.' '.$user->last_name }}
+                                      {{ $user->first_name }}
+                                  </a>
+                                </td>
+                                <td>
+                                  <a href="{{ route('admin.user.user.edit', [$user->id]) }}">
+                                      {{ $user->last_name }}
                                   </a>
                                 </td>
                                 <td>{{ $user->email }}</td>
-                                <td>{{ $user->avatar }}</td>
-                                <td>{{ $user->civility }}</td>
+                                <td>
+                                    @if($user->club == true)
+                                        <span class="label label-sm label-success">{{ trans('Active') }}</span>
+                                    @else
+                                        <span class="label label-sm label-info">{{ trans('Disactive') }}</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($user->ambassador == true)
+                                        <span class="label label-sm label-success">{{ trans('Active') }}</span>
+                                    @else
+                                        <span class="label label-sm label-info">{{ trans('Disactive') }}</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($user->type == 1)
+                                        <span class="label label-sm label-warning">{{ trans('PROFESSIONAL') }}</span>
+                                    @else
+                                        <span class="label label-sm label-danger">{{ trans('USER') }}</span>
+                                    @endif
+                                </td>
+                                <td>
+                                    @if($user->status == true)
+                                        <span class="label label-sm label-success">{{ trans('Active') }}</span>
+                                    @else
+                                        <span class="label label-sm label-info">{{ trans('Disactive') }}</span>
+                                    @endif
+                                </td>
                                 <td>{{ $user->created_at }}</td>
                                 <td>
                                     <div class="btn-group">
@@ -60,10 +94,13 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>{{ trans('user::users.table.full-name') }}</th>
+                                <th>{{ trans('user::users.table.first-name') }}</th>
+                                <th>{{ trans('user::users.table.last-name') }}</th>
                                 <th>{{ trans('user::users.table.email') }}</th>
-                                <th>{{ trans('user::users.table.avatar') }}</th>
-                                <th>{{ trans('user::users.table.civility') }}</th>
+                                <th>{{ trans('user::users.table.club') }}</th>
+                                <th>{{ trans('user::users.table.ambassador') }}</th>
+                                <th>{{ trans('user::users.table.type') }}</th>
+                                <th>{{ trans('user::users.table.status') }}</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>
