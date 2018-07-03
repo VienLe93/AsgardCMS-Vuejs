@@ -65,7 +65,7 @@
         <section class="content">
             @include('partials.notifications')
             @yield('content')
-            <!-- <router-view></router-view> -->
+            <router-view></router-view>
         </section><!-- /.content -->
     </aside><!-- /.right-side -->
     @include('partials.footer')
