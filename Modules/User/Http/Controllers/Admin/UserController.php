@@ -53,7 +53,8 @@ class UserController extends BaseUserModuleController
      */
     public function index()
     {
-        return view('user::admin.users.index');
+        $users = $this->user->all();
+        return view('user::admin.users.index', compact('users'));
     }
 
     /**
