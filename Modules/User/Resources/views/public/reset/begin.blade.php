@@ -10,6 +10,7 @@
     </div>
     <!-- /.login-logo -->
     <div class="login-box-body">
+        <h1 class="login-box-msg">{{ trans('user::auth.forgot password') }}</h1>
         <p class="login-box-msg">{{ trans('user::auth.to reset password complete this form') }}</p>
         @include('partials.notifications')
 

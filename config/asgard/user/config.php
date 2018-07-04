@@ -28,7 +28,7 @@ return [
     | Define which column(s) you'd like to use to login with, currently
     | only supported by the Sentinel user driver
     */
-    'login-columns' => ['email'],
+    'login-columns' => ['user_name'],
     /*
     |--------------------------------------------------------------------------
     | Define a class that will handle User presentation
@@ -41,7 +41,7 @@ return [
     | Allow anonymous user registration
     |--------------------------------------------------------------------------
     */
-    'allow_user_registration' => true,
+    'allow_user_registration' => false,
     /*
     |--------------------------------------------------------------------------
     | The default role for new user registrations
