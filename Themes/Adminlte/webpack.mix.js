@@ -18,7 +18,8 @@ mix.copy('resources/assets/js/main.js', 'assets/js/main.js');
  * Compile js and scss
  */
 // mix.js('resources/assets/js/asgardcms.js', 'assets/js/asgardcms.js');
-// mix.sass('resources/assets/scss/asgardcms.scss', 'assets/css/asgardcms.css');
+//mix.sass('resources/assets/scss/asgardcms.scss', 'assets/css/asgardcms.css');
+mix.sass('resources/assets/scss/custom.scss', 'assets/css/custom.css');
 
 /**
  * Copy node module

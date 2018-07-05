@@ -117435,7 +117435,7 @@ var render = function() {
           { attrs: { separator: "/" } },
           [
             _c("el-breadcrumb-item", [
-              _c("a", { attrs: { href: "/backend" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
               ])
             ]),
@@ -119031,7 +119031,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),

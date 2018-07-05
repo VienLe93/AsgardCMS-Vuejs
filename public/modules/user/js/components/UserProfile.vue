@@ -2,18 +2,18 @@
     <div>
         <div class="content-header">
             <h1>
-                {{ trans('users.title.edit-profile') }}
+                {{ trans('users.title.edit-profile') }}test
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.users.account'}">{{ trans('users.breadcrumb.edit-profile') }}
                 </el-breadcrumb-item>
             </el-breadcrumb>
         </div>
 
-        <el-form ref="form"
+        <!-- <el-form ref="form"
                  :model="user"
                  label-width="120px"
                  label-position="top"
@@ -25,7 +25,7 @@
                         <div class="box-body">
                             <el-tabs>
                                 <el-tab-pane :label="trans('users.tabs.data')">
-                                    <span slot-scope="label"
+                                    <span slot="label"
                                           :class="{'error' : form.errors.any()}">
                                         {{ trans('users.tabs.data') }}
                                     </span>
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        </el-form>
+        </el-form> -->
     </div>
 </template>
 
