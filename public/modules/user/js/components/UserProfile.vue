@@ -2,7 +2,7 @@
     <div>
         <div class="content-header">
             <h1>
-                {{ trans('users.title.edit-profile') }}
+                {{ trans('users.title.edit-profile') }}test
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>

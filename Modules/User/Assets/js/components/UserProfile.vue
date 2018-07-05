@@ -13,7 +13,7 @@
             </el-breadcrumb>
         </div>
 
-        <!-- <el-form ref="form"
+        <el-form ref="form"
                  :model="user"
                  label-width="120px"
                  label-position="top"
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-        </el-form> -->
+        </el-form>
     </div>
 </template>
 
