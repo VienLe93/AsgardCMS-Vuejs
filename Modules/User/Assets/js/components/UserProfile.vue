@@ -6,7 +6,7 @@
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.users.account'}">{{ trans('users.breadcrumb.edit-profile') }}
                 </el-breadcrumb-item>
@@ -29,24 +29,108 @@
                                           :class="{'error' : form.errors.any()}">
                                         {{ trans('users.tabs.data') }}
                                     </span>
-                                    <el-form-item :label="trans('users.form.first-name')"
+                                    <div class="row">
+                                      <div class="col-xs-12">
+                                        <el-form-item :label="trans('users.form.avatar')"
+                                                  :class="{'el-form-item is-error': form.errors.has('avatar') }">
+                                              <picture-input 
+                                                ref="pictureInput"
+                                                width="600" 
+                                                height="600" 
+                                                margin="16" 
+                                                accept="image/jpeg,image/png" 
+                                                size="10" 
+                                                button-class="btn"
+                                                :custom-strings="{
+                                                  upload: '<h1>Bummer!</h1>',
+                                                  drag: 'Drag a 😺 GIF or GTFO'
+                                                }"
+                                                @change="onChange">
+                                              </picture-input>
+                                              <div class="el-form-item__error" v-if="form.errors.has('avatar')"
+                                                   v-text="form.errors.first('avatar')"></div>
+                                          </el-form-item>
+                                      </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                            <el-form-item :label="trans('users.form.user-name')"
+                                                  :class="{'el-form-item is-error': form.errors.has('user_name') }">
+                                                <el-input v-model="user.user_name"></el-input>
+                                                <div class="el-form-item__error" v-if="form.errors.has('user_name')"
+                                                     v-text="form.errors.first('user_name')"></div>
+                                            </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.first-name')"
                                                   :class="{'el-form-item is-error': form.errors.has('first_name') }">
-                                        <el-input v-model="user.first_name"></el-input>
-                                        <div class="el-form-item__error" v-if="form.errors.has('first_name')"
-                                             v-text="form.errors.first('first_name')"></div>
-                                    </el-form-item>
-                                    <el-form-item :label="trans('users.form.last-name')"
+                                              <el-input v-model="user.first_name"></el-input>
+                                              <div class="el-form-item__error" v-if="form.errors.has('first_name')"
+                                                   v-text="form.errors.first('first_name')"></div>
+                                          </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.last-name')"
                                                   :class="{'el-form-item is-error': form.errors.has('last_name') }">
-                                        <el-input v-model="user.last_name"></el-input>
-                                        <div class="el-form-item__error" v-if="form.errors.has('last_name')"
-                                             v-text="form.errors.first('last_name')"></div>
-                                    </el-form-item>
-                                    <el-form-item :label="trans('users.form.email')"
+                                              <el-input v-model="user.last_name"></el-input>
+                                              <div class="el-form-item__error" v-if="form.errors.has('last_name')"
+                                                   v-text="form.errors.first('last_name')"></div>
+                                          </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.role')"
+                                                  :class="{'el-form-item is-error': form.errors.has('role') }">
+                                            <el-select v-model="user.roles" multiple placeholder="Select">
+                                                <el-option
+                                                        v-for="role in roles"
+                                                        :key="role.id"
+                                                        :label="role.name"
+                                                        :value="role.id">
+                                                </el-option>
+                                            </el-select>
+                                              <div class="el-form-item__error" v-if="form.errors.has('role')"
+                                                   v-text="form.errors.first('role')"></div>
+                                          </el-form-item>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.email')"
                                                   :class="{'el-form-item is-error': form.errors.has('email') }">
-                                        <el-input v-model="user.email"></el-input>
-                                        <div class="el-form-item__error" v-if="form.errors.has('email')"
-                                             v-text="form.errors.first('email')"></div>
-                                    </el-form-item>
+                                              <el-input v-model="user.email"></el-input>
+                                              <div class="el-form-item__error" v-if="form.errors.has('email')"
+                                                   v-text="form.errors.first('email')"></div>
+                                          </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.phone')"
+                                                :class="{'el-form-item is-error': form.errors.has('phone') }">
+                                              <el-input v-model="user.phone"></el-input>
+                                              <div class="el-form-item__error" v-if="form.errors.has('phone')"
+                                                   v-text="form.errors.first('phone')"></div>
+                                          </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          <el-form-item :label="trans('users.form.country_id')"
+                                                  :class="{'el-form-item is-error': form.errors.has('country_id') }">
+                                              <el-select v-model="user.country_id" placeholder="Select" style="width: 100%">
+                                                  <el-option
+                                                          v-for="country in countries"
+                                                          :key="country.id"
+                                                          :label="country.name"
+                                                          :value="country.id">
+                                                  </el-option>
+                                              </el-select>
+                                              <div class="el-form-item__error" v-if="form.errors.has('country_id')"
+                                                   v-text="form.errors.first('country_id')"></div>
+                                          </el-form-item>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-4 col-md-3">
+                                          
+                                        </div>
+                                    </div>
+
                                 </el-tab-pane>
                                 <el-tab-pane :label="trans('users.tabs.new password')" v-if="! user.is_new">
                                         <h4>{{ trans('users.new password setup') }}</h4>

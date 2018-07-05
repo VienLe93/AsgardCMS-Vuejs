@@ -118884,7 +118884,7 @@ var render = function() {
           { attrs: { separator: "/" } },
           [
             _c("el-breadcrumb-item", [
-              _c("a", { attrs: { href: "/backend" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
               ])
             ]),
@@ -119931,7 +119931,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -120499,7 +120499,7 @@ var render = function() {
           { attrs: { separator: "/" } },
           [
             _c("el-breadcrumb-item", [
-              _c("a", { attrs: { href: "/backend" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
               ])
             ]),
@@ -121178,7 +121178,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -122010,6 +122010,90 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
     props: {
@@ -122095,7 +122179,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -122172,116 +122256,427 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
-                            _c(
-                              "el-form-item",
-                              {
-                                class: {
-                                  "el-form-item is-error": _vm.form.errors.has(
-                                    "first_name"
-                                  )
-                                },
-                                attrs: {
-                                  label: _vm.trans("users.form.first-name")
-                                }
-                              },
-                              [
-                                _c("el-input", {
-                                  model: {
-                                    value: _vm.user.first_name,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.user, "first_name", $$v)
-                                    },
-                                    expression: "user.first_name"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _vm.form.errors.has("first_name")
-                                  ? _c("div", {
-                                      staticClass: "el-form-item__error",
-                                      domProps: {
-                                        textContent: _vm._s(
-                                          _vm.form.errors.first("first_name")
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "avatar"
                                         )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.avatar")
                                       }
-                                    })
-                                  : _vm._e()
-                              ],
-                              1
-                            ),
+                                    },
+                                    [
+                                      _c("picture-input", {
+                                        ref: "pictureInput",
+                                        attrs: {
+                                          width: "600",
+                                          height: "600",
+                                          margin: "16",
+                                          accept: "image/jpeg,image/png",
+                                          size: "10",
+                                          "button-class": "btn",
+                                          "custom-strings": {
+                                            upload: "<h1>Bummer!</h1>",
+                                            drag: "Drag a 😺 GIF or GTFO"
+                                          }
+                                        },
+                                        on: { change: _vm.onChange }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("avatar")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first("avatar")
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]),
                             _vm._v(" "),
-                            _c(
-                              "el-form-item",
-                              {
-                                class: {
-                                  "el-form-item is-error": _vm.form.errors.has(
-                                    "last_name"
-                                  )
-                                },
-                                attrs: {
-                                  label: _vm.trans("users.form.last-name")
-                                }
-                              },
-                              [
-                                _c("el-input", {
-                                  model: {
-                                    value: _vm.user.last_name,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.user, "last_name", $$v)
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "user_name"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.user-name")
+                                      }
                                     },
-                                    expression: "user.last_name"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _vm.form.errors.has("last_name")
-                                  ? _c("div", {
-                                      staticClass: "el-form-item__error",
-                                      domProps: {
-                                        textContent: _vm._s(
-                                          _vm.form.errors.first("last_name")
+                                    [
+                                      _c("el-input", {
+                                        model: {
+                                          value: _vm.user.user_name,
+                                          callback: function($$v) {
+                                            _vm.$set(_vm.user, "user_name", $$v)
+                                          },
+                                          expression: "user.user_name"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("user_name")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first(
+                                                  "user_name"
+                                                )
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "first_name"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans(
+                                          "users.form.first-name"
                                         )
                                       }
-                                    })
-                                  : _vm._e()
-                              ],
-                              1
-                            ),
+                                    },
+                                    [
+                                      _c("el-input", {
+                                        model: {
+                                          value: _vm.user.first_name,
+                                          callback: function($$v) {
+                                            _vm.$set(
+                                              _vm.user,
+                                              "first_name",
+                                              $$v
+                                            )
+                                          },
+                                          expression: "user.first_name"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("first_name")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first(
+                                                  "first_name"
+                                                )
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "last_name"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.last-name")
+                                      }
+                                    },
+                                    [
+                                      _c("el-input", {
+                                        model: {
+                                          value: _vm.user.last_name,
+                                          callback: function($$v) {
+                                            _vm.$set(_vm.user, "last_name", $$v)
+                                          },
+                                          expression: "user.last_name"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("last_name")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first(
+                                                  "last_name"
+                                                )
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "role"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.role")
+                                      }
+                                    },
+                                    [
+                                      _c(
+                                        "el-select",
+                                        {
+                                          attrs: {
+                                            multiple: "",
+                                            placeholder: "Select"
+                                          },
+                                          model: {
+                                            value: _vm.user.roles,
+                                            callback: function($$v) {
+                                              _vm.$set(_vm.user, "roles", $$v)
+                                            },
+                                            expression: "user.roles"
+                                          }
+                                        },
+                                        _vm._l(_vm.roles, function(role) {
+                                          return _c("el-option", {
+                                            key: role.id,
+                                            attrs: {
+                                              label: role.name,
+                                              value: role.id
+                                            }
+                                          })
+                                        })
+                                      ),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("role")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first("role")
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              )
+                            ]),
                             _vm._v(" "),
-                            _c(
-                              "el-form-item",
-                              {
-                                class: {
-                                  "el-form-item is-error": _vm.form.errors.has(
-                                    "email"
-                                  )
-                                },
-                                attrs: { label: _vm.trans("users.form.email") }
-                              },
-                              [
-                                _c("el-input", {
-                                  model: {
-                                    value: _vm.user.email,
-                                    callback: function($$v) {
-                                      _vm.$set(_vm.user, "email", $$v)
+                            _c("div", { staticClass: "row" }, [
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "email"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.email")
+                                      }
                                     },
-                                    expression: "user.email"
-                                  }
-                                }),
-                                _vm._v(" "),
-                                _vm.form.errors.has("email")
-                                  ? _c("div", {
-                                      staticClass: "el-form-item__error",
-                                      domProps: {
-                                        textContent: _vm._s(
-                                          _vm.form.errors.first("email")
+                                    [
+                                      _c("el-input", {
+                                        model: {
+                                          value: _vm.user.email,
+                                          callback: function($$v) {
+                                            _vm.$set(_vm.user, "email", $$v)
+                                          },
+                                          expression: "user.email"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("email")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first("email")
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "phone"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans("users.form.phone")
+                                      }
+                                    },
+                                    [
+                                      _c("el-input", {
+                                        model: {
+                                          value: _vm.user.phone,
+                                          callback: function($$v) {
+                                            _vm.$set(_vm.user, "phone", $$v)
+                                          },
+                                          expression: "user.phone"
+                                        }
+                                      }),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("phone")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first("phone")
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c(
+                                "div",
+                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
+                                [
+                                  _c(
+                                    "el-form-item",
+                                    {
+                                      class: {
+                                        "el-form-item is-error": _vm.form.errors.has(
+                                          "country_id"
+                                        )
+                                      },
+                                      attrs: {
+                                        label: _vm.trans(
+                                          "users.form.country_id"
                                         )
                                       }
-                                    })
-                                  : _vm._e()
-                              ],
-                              1
-                            )
-                          ],
-                          1
+                                    },
+                                    [
+                                      _c(
+                                        "el-select",
+                                        {
+                                          staticStyle: { width: "100%" },
+                                          attrs: { placeholder: "Select" },
+                                          model: {
+                                            value: _vm.user.country_id,
+                                            callback: function($$v) {
+                                              _vm.$set(
+                                                _vm.user,
+                                                "country_id",
+                                                $$v
+                                              )
+                                            },
+                                            expression: "user.country_id"
+                                          }
+                                        },
+                                        _vm._l(_vm.countries, function(
+                                          country
+                                        ) {
+                                          return _c("el-option", {
+                                            key: country.id,
+                                            attrs: {
+                                              label: country.name,
+                                              value: country.id
+                                            }
+                                          })
+                                        })
+                                      ),
+                                      _vm._v(" "),
+                                      _vm.form.errors.has("country_id")
+                                        ? _c("div", {
+                                            staticClass: "el-form-item__error",
+                                            domProps: {
+                                              textContent: _vm._s(
+                                                _vm.form.errors.first(
+                                                  "country_id"
+                                                )
+                                              )
+                                            }
+                                          })
+                                        : _vm._e()
+                                    ],
+                                    1
+                                  )
+                                ],
+                                1
+                              ),
+                              _vm._v(" "),
+                              _c("div", {
+                                staticClass: "col-xs-12 col-sm-4 col-md-3"
+                              })
+                            ])
+                          ]
                         ),
                         _vm._v(" "),
                         !_vm.user.is_new
