@@ -13,5 +13,4 @@ yarn-error.log
 .env
 .php_cs.cache
 .DS_Store
-composer.lock
 yarn.lock

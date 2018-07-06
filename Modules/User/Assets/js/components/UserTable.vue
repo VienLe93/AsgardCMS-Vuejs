@@ -39,8 +39,8 @@
                                     ref="pageTable"
                                     v-loading.body="tableIsLoading"
                                     @sort-change="handleSortChange">
-                                <el-table-column prop="id" label="Id" width="75" sortable="custom">
-                                </el-table-column>
+                                <!-- <el-table-column prop="id" label="Id" width="75" sortable="custom">
+                                </el-table-column> -->
                                 <el-table-column prop="first_name" :label="trans('users.table.first-name')" sortable="custom">
                                     <template slot-scope="scope">
                                         <a @click.prevent="goToEdit(scope)" href="#">
@@ -59,6 +59,13 @@
                                     <template slot-scope="scope">
                                         <a @click.prevent="goToEdit(scope)" href="#">
                                             {{ scope.row.email }}
+                                        </a>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="role" :label="trans('users.table.role')" sortable="custom">
+                                    <template slot-scope="scope">
+                                        <a @click.prevent="goToEdit(scope)" href="#">
+                                            {{ scope.row.role }}
                                         </a>
                                     </template>
                                 </el-table-column>

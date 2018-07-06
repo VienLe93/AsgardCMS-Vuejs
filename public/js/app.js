@@ -42917,7 +42917,7 @@ exports.default = _input2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_vue__ = __webpack_require__(103);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ce34479_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_vue__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_eddb4a56_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_vue__ = __webpack_require__(105);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -42933,7 +42933,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_input_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ce34479_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_eddb4a56_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_input_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -46375,7 +46375,7 @@ exports.default = _tag2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_tag_vue__ = __webpack_require__(246);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_tag_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_tag_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c35058ce_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_tag_vue__ = __webpack_require__(247);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_466877f5_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_tag_vue__ = __webpack_require__(247);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -46391,7 +46391,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_tag_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_c35058ce_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_tag_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_466877f5_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_tag_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -93226,7 +93226,7 @@ exports.default = _checkbox2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_vue__ = __webpack_require__(124);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0b40748e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_vue__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_59b8b1d6_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_vue__ = __webpack_require__(125);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -93242,7 +93242,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0b40748e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_59b8b1d6_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -93701,7 +93701,7 @@ exports.default = _button2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue__ = __webpack_require__(153);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_59f41f99_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_vue__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_36b70ef5_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_vue__ = __webpack_require__(154);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -93717,7 +93717,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_59f41f99_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_36b70ef5_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -95590,7 +95590,7 @@ exports.default = _checkboxGroup2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_group_vue__ = __webpack_require__(132);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_group_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_group_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3fe0ab2a_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_group_vue__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_376416c7_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_group_vue__ = __webpack_require__(133);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -95606,7 +95606,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_checkbox_group_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_3fe0ab2a_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_group_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_376416c7_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_checkbox_group_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -95939,7 +95939,7 @@ exports.default = _progress2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue__ = __webpack_require__(301);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f5ca3c0e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__ = __webpack_require__(302);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ddec355_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__ = __webpack_require__(302);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -95955,7 +95955,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_progress_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_f5ca3c0e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ddec355_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_progress_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -96425,7 +96425,7 @@ exports.default = _select2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_vue__ = __webpack_require__(140);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_64fcc54e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_vue__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ab76e696_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_vue__ = __webpack_require__(145);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -96441,7 +96441,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_64fcc54e_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_ab76e696_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -97377,7 +97377,7 @@ exports.default = {
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_dropdown_vue__ = __webpack_require__(142);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_dropdown_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_dropdown_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51a64935_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_dropdown_vue__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0a24e159_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_dropdown_vue__ = __webpack_require__(143);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -97393,7 +97393,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_select_dropdown_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_51a64935_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_dropdown_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_0a24e159_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_select_dropdown_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -97653,7 +97653,7 @@ module.exports = __webpack_require__(54);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fbd6e75c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ed77bae_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__ = __webpack_require__(37);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -97669,7 +97669,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fbd6e75c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ed77bae_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -98115,7 +98115,7 @@ module.exports = __webpack_require__(54);
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fbd6e75c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ed77bae_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__ = __webpack_require__(37);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -98131,7 +98131,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_option_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_fbd6e75c_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_5ed77bae_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_option_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -98542,7 +98542,7 @@ exports.default = _buttonGroup2.default;
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_group_vue__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_group_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_group_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d69dc76a_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_group_vue__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4c0216a7_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_group_vue__ = __webpack_require__(158);
 var normalizeComponent = __webpack_require__(0)
 /* script */
 
@@ -98558,7 +98558,7 @@ var __vue_scopeId__ = null
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
   __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_lib_selector_type_script_index_0_button_group_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_d69dc76a_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_group_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_lib_template_compiler_index_id_data_v_4c0216a7_hasScoped_false_preserveWhitespace_false_buble_transforms_node_modules_vue_loader_lib_selector_type_template_index_0_button_group_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
@@ -120472,6 +120472,13 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 626 */
@@ -120605,15 +120612,6 @@ var render = function() {
                   [
                     _c("el-table-column", {
                       attrs: {
-                        prop: "id",
-                        label: "Id",
-                        width: "75",
-                        sortable: "custom"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("el-table-column", {
-                      attrs: {
                         prop: "first_name",
                         label: _vm.trans("users.table.first-name"),
                         sortable: "custom"
@@ -120710,6 +120708,42 @@ var render = function() {
                                   _vm._v(
                                     "\n                                        " +
                                       _vm._s(scope.row.email) +
+                                      "\n                                    "
+                                  )
+                                ]
+                              )
+                            ]
+                          }
+                        }
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("el-table-column", {
+                      attrs: {
+                        prop: "role",
+                        label: _vm.trans("users.table.role"),
+                        sortable: "custom"
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "default",
+                          fn: function(scope) {
+                            return [
+                              _c(
+                                "a",
+                                {
+                                  attrs: { href: "#" },
+                                  on: {
+                                    click: function($event) {
+                                      $event.preventDefault()
+                                      _vm.goToEdit(scope)
+                                    }
+                                  }
+                                },
+                                [
+                                  _vm._v(
+                                    "\n                                        " +
+                                      _vm._s(scope.row.role) +
                                       "\n                                    "
                                   )
                                 ]
@@ -122010,90 +122044,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
 
 exports.default = {
     props: {
@@ -122179,7 +122129,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/admin" } }, [
+                _c("a", { attrs: { href: "/backend" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -122256,427 +122206,116 @@ var render = function() {
                               ]
                             ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "row" }, [
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "avatar"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.avatar")
-                                      }
-                                    },
-                                    [
-                                      _c("picture-input", {
-                                        ref: "pictureInput",
-                                        attrs: {
-                                          width: "600",
-                                          height: "600",
-                                          margin: "16",
-                                          accept: "image/jpeg,image/png",
-                                          size: "10",
-                                          "button-class": "btn",
-                                          "custom-strings": {
-                                            upload: "<h1>Bummer!</h1>",
-                                            drag: "Drag a 😺 GIF or GTFO"
-                                          }
-                                        },
-                                        on: { change: _vm.onChange }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("avatar")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first("avatar")
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
+                            _c(
+                              "el-form-item",
+                              {
+                                class: {
+                                  "el-form-item is-error": _vm.form.errors.has(
+                                    "first_name"
                                   )
-                                ],
-                                1
-                              )
-                            ]),
+                                },
+                                attrs: {
+                                  label: _vm.trans("users.form.first-name")
+                                }
+                              },
+                              [
+                                _c("el-input", {
+                                  model: {
+                                    value: _vm.user.first_name,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "first_name", $$v)
+                                    },
+                                    expression: "user.first_name"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("first_name")
+                                  ? _c("div", {
+                                      staticClass: "el-form-item__error",
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.form.errors.first("first_name")
+                                        )
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "row" }, [
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "user_name"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.user-name")
-                                      }
-                                    },
-                                    [
-                                      _c("el-input", {
-                                        model: {
-                                          value: _vm.user.user_name,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.user, "user_name", $$v)
-                                          },
-                                          expression: "user.user_name"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("user_name")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first(
-                                                  "user_name"
-                                                )
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
+                            _c(
+                              "el-form-item",
+                              {
+                                class: {
+                                  "el-form-item is-error": _vm.form.errors.has(
+                                    "last_name"
                                   )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "first_name"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans(
-                                          "users.form.first-name"
+                                },
+                                attrs: {
+                                  label: _vm.trans("users.form.last-name")
+                                }
+                              },
+                              [
+                                _c("el-input", {
+                                  model: {
+                                    value: _vm.user.last_name,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "last_name", $$v)
+                                    },
+                                    expression: "user.last_name"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("last_name")
+                                  ? _c("div", {
+                                      staticClass: "el-form-item__error",
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.form.errors.first("last_name")
                                         )
                                       }
-                                    },
-                                    [
-                                      _c("el-input", {
-                                        model: {
-                                          value: _vm.user.first_name,
-                                          callback: function($$v) {
-                                            _vm.$set(
-                                              _vm.user,
-                                              "first_name",
-                                              $$v
-                                            )
-                                          },
-                                          expression: "user.first_name"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("first_name")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first(
-                                                  "first_name"
-                                                )
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "last_name"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.last-name")
-                                      }
-                                    },
-                                    [
-                                      _c("el-input", {
-                                        model: {
-                                          value: _vm.user.last_name,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.user, "last_name", $$v)
-                                          },
-                                          expression: "user.last_name"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("last_name")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first(
-                                                  "last_name"
-                                                )
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "role"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.role")
-                                      }
-                                    },
-                                    [
-                                      _c(
-                                        "el-select",
-                                        {
-                                          attrs: {
-                                            multiple: "",
-                                            placeholder: "Select"
-                                          },
-                                          model: {
-                                            value: _vm.user.roles,
-                                            callback: function($$v) {
-                                              _vm.$set(_vm.user, "roles", $$v)
-                                            },
-                                            expression: "user.roles"
-                                          }
-                                        },
-                                        _vm._l(_vm.roles, function(role) {
-                                          return _c("el-option", {
-                                            key: role.id,
-                                            attrs: {
-                                              label: role.name,
-                                              value: role.id
-                                            }
-                                          })
-                                        })
-                                      ),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("role")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first("role")
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              )
-                            ]),
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
                             _vm._v(" "),
-                            _c("div", { staticClass: "row" }, [
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "email"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.email")
-                                      }
-                                    },
-                                    [
-                                      _c("el-input", {
-                                        model: {
-                                          value: _vm.user.email,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.user, "email", $$v)
-                                          },
-                                          expression: "user.email"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("email")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first("email")
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
+                            _c(
+                              "el-form-item",
+                              {
+                                class: {
+                                  "el-form-item is-error": _vm.form.errors.has(
+                                    "email"
                                   )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "phone"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans("users.form.phone")
-                                      }
+                                },
+                                attrs: { label: _vm.trans("users.form.email") }
+                              },
+                              [
+                                _c("el-input", {
+                                  model: {
+                                    value: _vm.user.email,
+                                    callback: function($$v) {
+                                      _vm.$set(_vm.user, "email", $$v)
                                     },
-                                    [
-                                      _c("el-input", {
-                                        model: {
-                                          value: _vm.user.phone,
-                                          callback: function($$v) {
-                                            _vm.$set(_vm.user, "phone", $$v)
-                                          },
-                                          expression: "user.phone"
-                                        }
-                                      }),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("phone")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first("phone")
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c(
-                                "div",
-                                { staticClass: "col-xs-12 col-sm-4 col-md-3" },
-                                [
-                                  _c(
-                                    "el-form-item",
-                                    {
-                                      class: {
-                                        "el-form-item is-error": _vm.form.errors.has(
-                                          "country_id"
-                                        )
-                                      },
-                                      attrs: {
-                                        label: _vm.trans(
-                                          "users.form.country_id"
+                                    expression: "user.email"
+                                  }
+                                }),
+                                _vm._v(" "),
+                                _vm.form.errors.has("email")
+                                  ? _c("div", {
+                                      staticClass: "el-form-item__error",
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.form.errors.first("email")
                                         )
                                       }
-                                    },
-                                    [
-                                      _c(
-                                        "el-select",
-                                        {
-                                          staticStyle: { width: "100%" },
-                                          attrs: { placeholder: "Select" },
-                                          model: {
-                                            value: _vm.user.country_id,
-                                            callback: function($$v) {
-                                              _vm.$set(
-                                                _vm.user,
-                                                "country_id",
-                                                $$v
-                                              )
-                                            },
-                                            expression: "user.country_id"
-                                          }
-                                        },
-                                        _vm._l(_vm.countries, function(
-                                          country
-                                        ) {
-                                          return _c("el-option", {
-                                            key: country.id,
-                                            attrs: {
-                                              label: country.name,
-                                              value: country.id
-                                            }
-                                          })
-                                        })
-                                      ),
-                                      _vm._v(" "),
-                                      _vm.form.errors.has("country_id")
-                                        ? _c("div", {
-                                            staticClass: "el-form-item__error",
-                                            domProps: {
-                                              textContent: _vm._s(
-                                                _vm.form.errors.first(
-                                                  "country_id"
-                                                )
-                                              )
-                                            }
-                                          })
-                                        : _vm._e()
-                                    ],
-                                    1
-                                  )
-                                ],
-                                1
-                              ),
-                              _vm._v(" "),
-                              _c("div", {
-                                staticClass: "col-xs-12 col-sm-4 col-md-3"
-                              })
-                            ])
-                          ]
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            )
+                          ],
+                          1
                         ),
                         _vm._v(" "),
                         !_vm.user.is_new

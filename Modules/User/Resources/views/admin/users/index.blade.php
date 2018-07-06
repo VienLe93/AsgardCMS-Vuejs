@@ -1,4 +1,4 @@
-{{--@extends('layouts.master')
+@extends('layouts.master')
 
 @section('content-header')
 @stop
@@ -14,9 +14,9 @@
         <dt><code>c</code></dt>
         <dd>{{ trans('user::users.title.create user') }}</dd>
     </dl>
-@stop--}}
+@stop
 
-@extends('layouts.master')
+<!-- @extends('layouts.master')
 
 @section('content-header')
     <h1>
@@ -41,7 +41,7 @@
             <div class="box box-primary">
                 <div class="box-header">
                 </div>
-                <!-- /.box-header -->
+                /.box-header
                 <div class="box-body">
                     <div class="table-responsive">
                         <table class="data-table table table-bordered table-hover">
@@ -115,10 +115,10 @@
                             </tr>
                             </tfoot>
                         </table>
-                        <!-- /.box-body -->
+                        /.box-body
                     </div>
                 </div>
-                <!-- /.box -->
+                /.box
             </div>
         </div>
     </div>
@@ -163,3 +163,4 @@
         });
     </script>
 @endpush
+ -->
