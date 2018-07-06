@@ -39,8 +39,8 @@
                                     ref="pageTable"
                                     v-loading.body="tableIsLoading"
                                     @sort-change="handleSortChange">
-                                <el-table-column prop="id" label="Id" width="75" sortable="custom">
-                                </el-table-column>
+                                <!-- <el-table-column prop="id" label="Id" width="75" sortable="custom">
+                                </el-table-column> -->
                                 <el-table-column prop="first_name" :label="trans('users.table.first-name')" sortable="custom">
                                     <template slot-scope="scope">
                                         <a @click.prevent="goToEdit(scope)" href="#">
@@ -60,6 +60,26 @@
                                         <a @click.prevent="goToEdit(scope)" href="#">
                                             {{ scope.row.email }}
                                         </a>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="role" :label="trans('users.table.role')" sortable="custom">
+                                    <template slot-scope="scope">
+                                        <span class="label label-sm label-success" v-for="role in scope.row.roles" v-if="role == 1">
+                                          Admin
+                                        </span>&nbsp;
+                                        <span class="label label-sm label-info" v-for="role in scope.row.roles" v-if="role == 2">
+                                          User
+                                        </span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="status" :label="trans('users.table.status')" sortable="custom">
+                                    <template slot-scope="scope">
+                                        <span class="label label-sm label-warning" v-if="scope.row.activated == true">
+                                          Active
+                                        </span>
+                                        <span class="label label-sm label-danger" v-else="scope.row.activated == false">
+                                          Disactive
+                                        </span>
                                     </template>
                                 </el-table-column>
                                 <el-table-column prop="created_at" :label="trans('core.table.created at')"

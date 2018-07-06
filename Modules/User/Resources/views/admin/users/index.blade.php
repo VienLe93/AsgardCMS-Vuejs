@@ -2,6 +2,7 @@
 
 @section('content-header')
 @stop
+
 @section('content')
 @stop
 

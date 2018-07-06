@@ -13,6 +13,7 @@ mix.less('resources/assets/less/asgard.less', 'assets/css/asgard.css');
  * Copy scripts
  */
 mix.copy('resources/assets/js/main.js', 'assets/js/main.js');
+mix.copy('user:js/bootstrap-toggle.min.js', 'assets/js/bootstrap-toggle.min.css');
 
 /**
  * Compile js and scss
@@ -20,6 +21,7 @@ mix.copy('resources/assets/js/main.js', 'assets/js/main.js');
 // mix.js('resources/assets/js/asgardcms.js', 'assets/js/asgardcms.js');
 //mix.sass('resources/assets/scss/asgardcms.scss', 'assets/css/asgardcms.css');
 mix.sass('resources/assets/scss/custom.scss', 'assets/css/custom.css');
+mix.copy('user:css/bootstrap-toggle.min.css', 'assets/css/bootstrap-toggle.min.css');
 
 /**
  * Copy node module

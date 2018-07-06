@@ -6,7 +6,7 @@
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.users.index'}">{{ trans('users.title.users') }}
                 </el-breadcrumb-item>
@@ -49,6 +49,15 @@
                                         <div class="el-form-item__error" v-if="form.errors.has('email')"
                                              v-text="form.errors.first('email')"></div>
                                     </el-form-item>
+                                    <el-form-item :label="trans('users.form.civility')"
+                                                  :class="{'el-form-item is-error': form.errors.has('civility') }">
+                                        <el-select v-model="user.civility" filterable>
+                                            <el-option v-for="(civility, key) in civilities" :key="civility"
+                                                       :label="civility" :value="key"></el-option>
+                                        </el-select>
+                                        <div class="el-form-item__error" v-if="form.errors.has('civility')"
+                                             v-text="form.errors.first('civility')"></div>
+                                    </el-form-item>
                                     <el-form-item :label="trans('users.form.is activated')"
                                                   :class="{'el-form-item is-error': form.errors.has('activated') }">
                                         <el-checkbox v-model="user.activated">Activated</el-checkbox>
@@ -87,10 +96,10 @@
                                              v-text="form.errors.first('password')"></div>
                                     </el-form-item>
                                 </el-tab-pane>
-                                <el-tab-pane :label="trans('users.tabs.permissions')">
+                                <!-- <el-tab-pane :label="trans('users.tabs.permissions')">
                                     <asgard-permissions v-model="user.permissions"
                                                         :current-permissions="user.permissions"></asgard-permissions>
-                                </el-tab-pane>
+                                </el-tab-pane> -->
                                 <el-tab-pane :label="trans('users.tabs.new password')" v-if="! user.is_new">
                                     <div v-if="! user.is_new">
                                         <div class="col-md-6">
