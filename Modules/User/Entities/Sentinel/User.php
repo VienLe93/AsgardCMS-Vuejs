@@ -22,6 +22,23 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
         'permissions',
         'first_name',
         'last_name',
+        'role',
+        'status',
+        'civility',
+        'post_code',
+        'avatar',
+        'newsletter',
+    ];
+
+    public $translatedAttributes = [
+        'user_name',
+        'email',
+        'password',
+        'permissions',
+        'first_name',
+        'last_name',
+        'role',
+        'status',
         'civility',
         'post_code',
         'avatar',

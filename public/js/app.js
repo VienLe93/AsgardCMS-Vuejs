@@ -120479,6 +120479,19 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 626 */
@@ -120729,25 +120742,79 @@ var render = function() {
                           key: "default",
                           fn: function(scope) {
                             return [
-                              _c(
-                                "a",
-                                {
-                                  attrs: { href: "#" },
-                                  on: {
-                                    click: function($event) {
-                                      $event.preventDefault()
-                                      _vm.goToEdit(scope)
-                                    }
-                                  }
-                                },
-                                [
-                                  _vm._v(
-                                    "\n                                        " +
-                                      _vm._s(scope.row.role) +
-                                      "\n                                    "
+                              _vm._l(scope.row.roles, function(role) {
+                                return role == 1
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "label label-sm label-success"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                      Admin\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              }),
+                              _vm._v(" \n                                    "),
+                              _vm._l(scope.row.roles, function(role) {
+                                return role == 2
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass: "label label-sm label-info"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                      User\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              })
+                            ]
+                          }
+                        }
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("el-table-column", {
+                      attrs: {
+                        prop: "status",
+                        label: _vm.trans("users.table.status"),
+                        sortable: "custom"
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "default",
+                          fn: function(scope) {
+                            return [
+                              scope.row.activated == true
+                                ? _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "label label-sm label-warning"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                      Active\n                                    "
+                                      )
+                                    ]
                                   )
-                                ]
-                              )
+                                : _c(
+                                    "span",
+                                    {
+                                      staticClass: "label label-sm label-danger"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                      Disactive\n                                    "
+                                      )
+                                    ]
+                                  )
                             ]
                           }
                         }
@@ -120940,6 +121007,15 @@ var _AsgardPermissions2 = _interopRequireDefault(_AsgardPermissions);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
+//
+//
+//
+//
+//
+//
 //
 //
 //
@@ -121413,6 +121489,56 @@ var render = function() {
                               {
                                 class: {
                                   "el-form-item is-error": _vm.form.errors.has(
+                                    "civility"
+                                  )
+                                },
+                                attrs: {
+                                  label: _vm.trans("users.form.civility")
+                                }
+                              },
+                              [
+                                _c(
+                                  "el-select",
+                                  {
+                                    attrs: { filterable: "" },
+                                    model: {
+                                      value: _vm.user.civility,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.user, "civility", $$v)
+                                      },
+                                      expression: "user.civility"
+                                    }
+                                  },
+                                  _vm._l(_vm.civilities, function(
+                                    civility,
+                                    key
+                                  ) {
+                                    return _c("el-option", {
+                                      key: civility,
+                                      attrs: { label: civility, value: key }
+                                    })
+                                  })
+                                ),
+                                _vm._v(" "),
+                                _vm.form.errors.has("civility")
+                                  ? _c("div", {
+                                      staticClass: "el-form-item__error",
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.form.errors.first("civility")
+                                        )
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-form-item",
+                              {
+                                class: {
+                                  "el-form-item is-error": _vm.form.errors.has(
                                     "activated"
                                   )
                                 },
@@ -121614,30 +121740,6 @@ var render = function() {
                               ],
                               1
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "el-tab-pane",
-                          {
-                            attrs: {
-                              label: _vm.trans("users.tabs.permissions")
-                            }
-                          },
-                          [
-                            _c("asgard-permissions", {
-                              attrs: {
-                                "current-permissions": _vm.user.permissions
-                              },
-                              model: {
-                                value: _vm.user.permissions,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.user, "permissions", $$v)
-                                },
-                                expression: "user.permissions"
-                              }
-                            })
                           ],
                           1
                         ),

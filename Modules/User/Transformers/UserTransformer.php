@@ -13,7 +13,10 @@ class UserTransformer extends Resource
             'first_name' => $this->first_name,
             'last_name' => $this->last_name,
             'fullname' => $this->present()->fullname,
+            'activated' => $this->isActivated(),
             'email' => $this->email,
+            'status' => $this->status,
+            'roles' => $this->roles->pluck('id'),
             'created_at' => $this->created_at,
 
             'urls' => [
