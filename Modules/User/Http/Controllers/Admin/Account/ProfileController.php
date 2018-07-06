@@ -7,6 +7,9 @@ use Modules\Core\Http\Controllers\Admin\AdminBaseController;
 use Modules\User\Contracts\Authentication;
 use Modules\User\Http\Requests\UpdateProfileRequest;
 use Modules\User\Repositories\UserRepository;
+use Modules\User\Entities\Sentinel\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends AdminBaseController
 {

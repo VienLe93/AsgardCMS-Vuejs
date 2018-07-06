@@ -136,4 +136,9 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
 
         return $permissions->hasAccess($permission);
     }
+    
+    public function getRole($userID)
+    {
+        // return $this->roles()->whereId($userID)->count() >= 1;
+    }
 }

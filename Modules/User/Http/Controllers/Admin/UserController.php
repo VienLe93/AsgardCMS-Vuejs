@@ -10,6 +10,8 @@ use Modules\User\Http\Requests\UpdateUserRequest;
 use Modules\User\Permissions\PermissionManager;
 use Modules\User\Repositories\RoleRepository;
 use Modules\User\Repositories\UserRepository;
+use Modules\User\Entities\Sentinel\User;
+use Auth;
 
 class UserController extends BaseUserModuleController
 {
@@ -25,6 +27,7 @@ class UserController extends BaseUserModuleController
      * @var Authentication
      */
     private $auth;
+    private $userModel;
 
     /**
      * @param PermissionManager $permissions
@@ -36,7 +39,8 @@ class UserController extends BaseUserModuleController
         PermissionManager $permissions,
         UserRepository $user,
         RoleRepository $role,
-        Authentication $auth
+        Authentication $auth,
+        User $userModel
     ) {
         parent::__construct();
 
@@ -44,6 +48,7 @@ class UserController extends BaseUserModuleController
         $this->user = $user;
         $this->role = $role;
         $this->auth = $auth;
+        $this->userModel = $userModel;
     }
 
     /**
@@ -53,7 +58,12 @@ class UserController extends BaseUserModuleController
      */
     public function index()
     {
-        $users = $this->user->all();
+        $users = $this->user->with('roles')->get();
+        foreach ($users as $key => $value) {
+          foreach ($value->roles as $key => $value) {
+            dd()
+          }
+        }
         return view('user::admin.users.index', compact('users'));
     }
 
