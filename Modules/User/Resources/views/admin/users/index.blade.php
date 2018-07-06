@@ -34,7 +34,7 @@
             <div class="row">
                 <div class="btn-group pull-right" style="margin: 0 15px 15px 0;">
                     <a href="{{ route('admin.user.user.create') }}" class="btn btn-primary btn-flat" style="padding: 4px 10px;">
-                        <i class="fa fa-pencil"></i> {{ trans('user::users.button.create user') }}
+                        <i class="fa fa-pencil"></i> {{ trans('user::users.button.new-user') }}
                     </a>
                 </div>
             </div>
@@ -47,11 +47,11 @@
                         <table class="data-table table table-bordered table-hover">
                             <thead>
                             <tr>
-                                <th>{{ trans('core::core.table.first_name') }}</th>
-                                <th>{{ trans('core::core.table.last_name') }}</th>
-                                <th>{{ trans('core::core.table.email') }}</th>
-                                <th>{{ trans('core::core.table.role') }}</th>
-                                <th>{{ trans('core::core.table.status') }}</th>
+                                <th>{{ trans('user::users.table.first_name') }}</th>
+                                <th>{{ trans('user::users.table.last_name') }}</th>
+                                <th>{{ trans('user::users.table.email') }}</th>
+                                <th>{{ trans('user::users.table.role') }}</th>
+                                <th>{{ trans('user::users.table.status') }}</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th data-sortable="false">{{ trans('core::core.table.actions') }}</th>
                             </tr>
@@ -74,10 +74,21 @@
                                     {{ $user->email }}
                                 </td>
                                 <td>
-                                    {{ $user->role }}
+                                  @foreach($user->roles as $role)
+                                    @if($role->id == ROLE_ADMIN)
+                                      <span class="label label-sm label-success">{{ $role->name }}</span>
+                                    @endif
+                                    @if($role->id == ROLE_USER)
+                                      <span class="label label-sm label-info">{{ $role->name }}</span>
+                                    @endif
+                                  @endforeach
                                 </td>
                                 <td>
-                                    {{ $user->status }}
+                                  @if($user->status == true)
+                                    <span class="label label-sm label-warning">Active</span>
+                                  @else
+                                    <span class="label label-sm label-danger">Disactive</span>
+                                  @endif
                                 </td>
                                 <td>
                                     {{ $user->created_at }}
@@ -94,11 +105,11 @@
                             </tbody>
                             <tfoot>
                             <tr>
-                                <th>{{ trans('core::core.table.first_name') }}</th>
-                                <th>{{ trans('core::core.table.last_name') }}</th>
-                                <th>{{ trans('core::core.table.email') }}</th>
-                                <th>{{ trans('core::core.table.role') }}</th>
-                                <th>{{ trans('core::core.table.status') }}</th>
+                                <th>{{ trans('user::users.table.first_name') }}</th>
+                                <th>{{ trans('user::users.table.last_name') }}</th>
+                                <th>{{ trans('user::users.table.email') }}</th>
+                                <th>{{ trans('user::users.table.role') }}</th>
+                                <th>{{ trans('user::users.table.status') }}</th>
                                 <th>{{ trans('core::core.table.created at') }}</th>
                                 <th>{{ trans('core::core.table.actions') }}</th>
                             </tr>

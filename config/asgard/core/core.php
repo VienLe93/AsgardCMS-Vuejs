@@ -126,6 +126,10 @@ return [
         'moment.js' => ['theme' => 'vendor/admin-lte/plugins/daterangepicker/moment.min.js'],
         'clipboard.js' => ['theme' => 'vendor/clipboard/dist/clipboard.min.js'],
         'simplemde.js' => ['theme' => 'vendor/simplemde/dist/simplemde.min.js'],
+        // User css
+        'bootstrap-toggle.min.css' => ['module' => 'user:css/bootstrap-toggle.min.css'],
+        // User js
+        'bootstrap-toggle.min.js' => ['module' => 'user:js/bootstrap-toggle.min.js'],
     ],
 
     /*
@@ -147,6 +151,7 @@ return [
             'selectize-default.css',
             'asgard.css',
             'custom.css',
+            'bootstrap-toggle.min.css',
         ],
         'js' => [
             'bootstrap.js',
@@ -160,6 +165,7 @@ return [
             'pace.js',
             'selectize.js',
             'main.js',
+            'bootstrap-toggle.min.js',
         ],
     ],
 

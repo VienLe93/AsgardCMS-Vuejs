@@ -12,6 +12,7 @@ use Modules\User\Repositories\RoleRepository;
 use Modules\User\Repositories\UserRepository;
 use Modules\User\Entities\Sentinel\User;
 use Auth;
+use Modules\User\Repositories\Sentinel\SentinelUserRepository;
 
 class UserController extends BaseUserModuleController
 {
@@ -58,12 +59,7 @@ class UserController extends BaseUserModuleController
      */
     public function index()
     {
-        $users = $this->user->with('roles')->get();
-        foreach ($users as $key => $value) {
-          foreach ($value->roles as $key => $value) {
-            dd()
-          }
-        }
+        $users = $this->user->all();
         return view('user::admin.users.index', compact('users'));
     }
 
