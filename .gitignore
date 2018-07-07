@@ -14,3 +14,7 @@ yarn-error.log
 .php_cs.cache
 .DS_Store
 yarn.lock
+composer.lock
+docker
+dcp
+docker-compose.yml
