@@ -13,7 +13,7 @@ return [
     | Define which route to redirect to after a successful login
     |--------------------------------------------------------------------------
     */
-    'redirect_route_after_login' => 'dashboard.index',
+    'redirect_route_after_login' => 'homepage',
     /*
     |--------------------------------------------------------------------------
     | Define which route the user should be redirected to after accessing
@@ -28,7 +28,7 @@ return [
     | Define which column(s) you'd like to use to login with, currently
     | only supported by the Sentinel user driver
     */
-    'login-columns' => ['user_name'],
+    'login-columns' => ['email'],
     /*
     |--------------------------------------------------------------------------
     | Define a class that will handle User presentation
@@ -41,7 +41,7 @@ return [
     | Allow anonymous user registration
     |--------------------------------------------------------------------------
     */
-    'allow_user_registration' => false,
+    'allow_user_registration' => true,
     /*
     |--------------------------------------------------------------------------
     | The default role for new user registrations

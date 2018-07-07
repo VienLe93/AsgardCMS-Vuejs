@@ -183,6 +183,19 @@ class SentinelUserRepositoryTest extends BaseUserTestCase
     }
 
     /** @test */
+    public function it_creates_a_user_token_when_creating_user_with_roles()
+    {
+        $this->createRole('User');
+
+        $user = $this->user->createWithRoles([
+            'email' => 'n.widart@gmail.com',
+            'password' => 'demo1234',
+        ], ['User']);
+
+        $this->assertCount(1, $user->api_keys);
+    }
+
+    /** @test */
     public function it_creates_user_without_triggering_events_for_cli()
     {
         Event::fake();
@@ -286,7 +299,7 @@ class SentinelUserRepositoryTest extends BaseUserTestCase
             'password' => 'demo1234',
         ], [1]);
 
-        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'activated' => 1], [2]);
+        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'is_activated' => 1], [2]);
 
         $user->refresh();
 
@@ -306,7 +319,7 @@ class SentinelUserRepositoryTest extends BaseUserTestCase
         ], [1]);
         Event::fake();
 
-        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'activated' => 1], [2]);
+        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'is_activated' => 1], [2]);
 
         Event::assertDispatched(UserWasUpdated::class, function ($e) use ($user) {
             return $e->user->id === $user->id;
@@ -329,7 +342,7 @@ class SentinelUserRepositoryTest extends BaseUserTestCase
             'password' => 'demo1234',
         ], [1]);
 
-        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'activated' => 1], [1]);
+        $this->user->updateAndSyncRoles($user->id, ['first_name' => 'John', 'last_name' => 'Doe', 'is_activated' => 1], [1]);
 
         $this->assertEquals('Jane', $this->user->find(1)->first_name);
     }

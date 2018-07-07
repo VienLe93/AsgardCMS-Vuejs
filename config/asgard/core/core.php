@@ -6,7 +6,7 @@ return [
    | The prefix that'll be used for the administration
    |--------------------------------------------------------------------------
    */
-    'admin-prefix' => 'admin',
+    'admin-prefix' => 'backend',
 
     /*
     |--------------------------------------------------------------------------
@@ -63,7 +63,7 @@ return [
     | Backend and Frontend routes.
     */
     'middleware' => [
-       'admin' => [
+       'backend' => [
            'auth.admin',
        ],
        'frontend' => [
@@ -90,7 +90,6 @@ return [
         'AdminLTE.css' => ['theme' => 'vendor/admin-lte/dist/css/AdminLTE.css'],
         'AdminLTE.all.skins.css' => ['theme' => 'vendor/admin-lte/dist/css/skins/_all-skins.min.css'],
         'asgard.css' => ['theme' => 'css/asgard.css'],
-        'custom.css' => ['theme' => 'css/custom.css'],
         //'gridstack.css' => ['module' => 'dashboard:vendor/gridstack/dist/gridstack.min.css'],
         'gridstack.css' => ['module' => 'dashboard:gridstack/gridstack.min.css'],
         'daterangepicker.css' => ['theme' => 'vendor/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css'],
@@ -146,7 +145,6 @@ return [
             'pace.css',
             'selectize-default.css',
             'asgard.css',
-            'custom.css',
         ],
         'js' => [
             'bootstrap.js',

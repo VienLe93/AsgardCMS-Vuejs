@@ -2,6 +2,7 @@
 
 @section('content-header')
 @stop
+
 @section('content')
 @stop
 
@@ -11,6 +12,6 @@
 @section('shortcuts')
     <dl class="dl-horizontal">
         <dt><code>c</code></dt>
-        <dd>{{ trans('user::users.title.create user') }}</dd>
+        <dd>{{ trans('user::users.button.new-user') }}</dd>
     </dl>
 @stop

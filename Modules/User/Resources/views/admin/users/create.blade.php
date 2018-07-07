@@ -12,7 +12,6 @@
 @section('shortcuts')
     <dl class="dl-horizontal">
         <dt><code>b</code></dt>
-        <dd>{{ trans('core::core.back to index') }}</dd>
+        <dd>{{ trans('user::users.navigation.back to index') }}</dd>
     </dl>
 @stop
-
