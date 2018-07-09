@@ -1,5 +1,12 @@
 url: https://github.com/AsgardCms/Platform
 versions:
+    "@unreleased":
+        added:
+            - Laravel 5.6 compatibility
+    "3.5.2":
+        changed:
+            - Don't show draft pages
+            - Throw a 404 if page status is disabled
     "3.5.2":
         changed:
             - Adding support for UTF-8 slug for non ASCII characters (Chinese etc.)
