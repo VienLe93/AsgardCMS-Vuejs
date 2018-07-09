@@ -16,17 +16,22 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
     use PresentableTrait, Authenticatable;
 
     protected $fillable = [
+        'user_name',
         'email',
         'password',
         'permissions',
         'first_name',
         'last_name',
+        'avatar',
+        'civility_id',
+        'city_id',
+        'newsletter',
     ];
 
     /**
      * {@inheritDoc}
      */
-    protected $loginNames = ['email'];
+    protected $loginNames = ['user_name'];
 
     protected $presenter = UserPresenter::class;
 

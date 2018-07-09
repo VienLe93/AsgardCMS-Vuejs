@@ -6,7 +6,7 @@
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.users.index'}">{{ trans('users.title.users') }}
                 </el-breadcrumb-item>
@@ -39,8 +39,8 @@
                                     ref="pageTable"
                                     v-loading.body="tableIsLoading"
                                     @sort-change="handleSortChange">
-                                <el-table-column prop="id" label="Id" width="75" sortable="custom">
-                                </el-table-column>
+                                <!-- <el-table-column prop="id" label="Id" width="75" sortable="custom">
+                                </el-table-column> -->
                                 <el-table-column prop="first_name" :label="trans('users.table.first-name')" sortable="custom">
                                     <template slot-scope="scope">
                                         <a @click.prevent="goToEdit(scope)" href="#">
@@ -60,6 +60,26 @@
                                         <a @click.prevent="goToEdit(scope)" href="#">
                                             {{ scope.row.email }}
                                         </a>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="roles" :label="trans('users.table.roles')" sortable="custom">
+                                    <template slot-scope="scope">
+                                        <span class="label label-sm label-success" v-for="role in scope.row.roles" v-if="role == 1">
+                                          Admin
+                                        </span>&nbsp;
+                                        <span class="label label-sm label-info" v-for="role in scope.row.roles" v-if="role == 2">
+                                          User
+                                        </span>
+                                    </template>
+                                </el-table-column>
+                                <el-table-column prop="is_activated" :label="trans('users.table.is_activated')" sortable="custom">
+                                    <template slot-scope="scope">
+                                        <span class="label label-sm label-warning" v-if="scope.row.is_activated == true">
+                                          Active
+                                        </span>
+                                        <span class="label label-sm label-danger" v-else="scope.row.activated == false">
+                                          Disactive
+                                        </span>
                                     </template>
                                 </el-table-column>
                                 <el-table-column prop="created_at" :label="trans('core.table.created at')"

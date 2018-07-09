@@ -14,11 +14,17 @@
         @include('partials.notifications')
 
         {!! Form::open(['route' => 'login.post']) !!}
-            <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
+            <!-- <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
                 <input type="email" class="form-control" autofocus
                        name="email" placeholder="{{ trans('user::auth.email') }}" value="{{ old('email')}}">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
+            </div> -->
+            <div class="form-group has-feedback {{ $errors->has('user_name') ? ' has-error' : '' }}">
+                <input type="text" class="form-control" autofocus
+                       name="user_name" placeholder="{{ trans('user::auth.user_name') }}" value="{{ old('user_name')}}">
+                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
+                {!! $errors->first('user_name', '<span class="help-block">:message</span>') !!}
             </div>
             <div class="form-group has-feedback {{ $errors->has('password') ? ' has-error' : '' }}">
                 <input type="password" class="form-control"
@@ -27,22 +33,26 @@
                 {!! $errors->first('password', '<span class="help-block">:message</span>') !!}
             </div>
             <div class="row">
-                <div class="col-xs-8">
+                <!-- <div class="col-xs-8">
                     <div class="checkbox icheck">
                         <label>
                             <input type="checkbox" name="remember_me"> {{ trans('user::auth.remember me') }}
                         </label>
                     </div>
-                </div>
-                <div class="col-xs-4">
-                    <button type="submit" class="btn btn-primary btn-block btn-flat">
+                </div> -->
+                <div class="col-xs-12">
+                    <button type="submit" class="btn btn-success btn-block btn-flat">
                         {{ trans('user::auth.login') }}
                     </button>
                 </div>
             </div>
         </form>
-
-        <a href="{{ route('reset')}}">{{ trans('user::auth.forgot password') }}</a><br>
+        <br>
+        <div class="pull-right">
+          <i class="glyphicon glyphicon-lock"></i>&nbsp;
+          <a href="{{ route('reset')}}">{{ trans('user::auth.forgot password') }}</a>
+        </div>
+        <br>
         @if (config('asgard.user.config.allow_user_registration'))
             <a href="{{ route('register')}}" class="text-center">{{ trans('user::auth.register')}}</a>
         @endif

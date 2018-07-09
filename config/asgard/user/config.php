@@ -13,7 +13,7 @@ return [
     | Define which route to redirect to after a successful login
     |--------------------------------------------------------------------------
     */
-    'redirect_route_after_login' => 'homepage',
+    'redirect_route_after_login' => 'dashboard.index',
     /*
     |--------------------------------------------------------------------------
     | Define which route the user should be redirected to after accessing
@@ -28,7 +28,7 @@ return [
     | Define which column(s) you'd like to use to login with, currently
     | only supported by the Sentinel user driver
     */
-    'login-columns' => ['email'],
+    'login-columns' => ['user_name'],
     /*
     |--------------------------------------------------------------------------
     | Define a class that will handle User presentation
@@ -56,11 +56,16 @@ return [
     | Set the fillable user fields, those fields will be mass assigned
     */
     'fillable' => [
+        'user_name',
         'email',
         'password',
         'permissions',
         'first_name',
         'last_name',
+        'avatar',
+        'civility_id',
+        'city_id',
+        'newsletter',
     ],
     /*
     |--------------------------------------------------------------------------
