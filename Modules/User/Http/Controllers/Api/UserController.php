@@ -61,7 +61,6 @@ class UserController extends Controller
     public function update(User $user, UpdateUserRequest $request)
     {
         $data = $this->mergeRequestWithPermissions($request);
-        dd($data);
 
         $this->user->updateAndSyncRoles($user->id, $data, $request->get('roles'));
 

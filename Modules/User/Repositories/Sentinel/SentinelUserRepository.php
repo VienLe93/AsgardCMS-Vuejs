@@ -148,6 +148,7 @@ class SentinelUserRepository implements UserRepository
      */
     public function updateAndSyncRoles($userId, $data, $roles)
     {
+      dd($data);
         $user = $this->user->find($userId);
 
         $this->checkForNewPassword($data);

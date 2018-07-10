@@ -119626,9 +119626,11 @@ exports.default = {
                 last_name: '',
                 permissions: {},
                 roles: {},
+                civilities: {},
                 is_new: false
             },
             roles: {},
+            civilities: {},
             form: new _formBackendValidation2.default(),
             loading: false,
             resetEmailIsLoading: false
