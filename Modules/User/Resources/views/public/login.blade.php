@@ -14,12 +14,6 @@
         @include('partials.notifications')
 
         {!! Form::open(['route' => 'login.post']) !!}
-            <!-- <div class="form-group has-feedback {{ $errors->has('email') ? ' has-error' : '' }}">
-                <input type="email" class="form-control" autofocus
-                       name="email" placeholder="{{ trans('user::auth.email') }}" value="{{ old('email')}}">
-                <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
-            </div> -->
             <div class="form-group has-feedback {{ $errors->has('username') ? ' has-error' : '' }}">
                 <input type="text" class="form-control" autofocus
                        name="username" placeholder="{{ trans('user::auth.username') }}" value="{{ old('username')}}">

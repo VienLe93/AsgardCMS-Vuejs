@@ -117333,7 +117333,7 @@ var render = function() {
           { attrs: { separator: "/" } },
           [
             _c("el-breadcrumb-item", [
-              _c("a", { attrs: { href: "/backend" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
               ])
             ]),
@@ -118380,7 +118380,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -118921,6 +118921,26 @@ exports.default = {
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 601 */
@@ -118948,7 +118968,7 @@ var render = function() {
           { attrs: { separator: "/" } },
           [
             _c("el-breadcrumb-item", [
-              _c("a", { attrs: { href: "/backend" } }, [
+              _c("a", { attrs: { href: "/admin" } }, [
                 _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
               ])
             ]),
@@ -119054,15 +119074,6 @@ var render = function() {
                   [
                     _c("el-table-column", {
                       attrs: {
-                        prop: "id",
-                        label: "Id",
-                        width: "75",
-                        sortable: "custom"
-                      }
-                    }),
-                    _vm._v(" "),
-                    _c("el-table-column", {
-                      attrs: {
                         prop: "first_name",
                         label: _vm.trans("users.table.first-name"),
                         sortable: "custom"
@@ -119163,6 +119174,96 @@ var render = function() {
                                   )
                                 ]
                               )
+                            ]
+                          }
+                        }
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("el-table-column", {
+                      attrs: {
+                        prop: "roles",
+                        label: _vm.trans("users.table.roles"),
+                        sortable: "custom"
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "default",
+                          fn: function(scope) {
+                            return [
+                              _vm._l(scope.row.roles, function(role) {
+                                return role == 1
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass:
+                                          "label label-sm label-success"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                      Admin\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              }),
+                              _vm._v(" \n                                    "),
+                              _vm._l(scope.row.roles, function(role) {
+                                return role == 2
+                                  ? _c(
+                                      "span",
+                                      {
+                                        staticClass: "label label-sm label-info"
+                                      },
+                                      [
+                                        _vm._v(
+                                          "\n                                      User\n                                    "
+                                        )
+                                      ]
+                                    )
+                                  : _vm._e()
+                              })
+                            ]
+                          }
+                        }
+                      ])
+                    }),
+                    _vm._v(" "),
+                    _c("el-table-column", {
+                      attrs: {
+                        prop: "is_activated",
+                        label: _vm.trans("users.table.is_activated"),
+                        sortable: "custom"
+                      },
+                      scopedSlots: _vm._u([
+                        {
+                          key: "default",
+                          fn: function(scope) {
+                            return [
+                              scope.row.is_activated == true
+                                ? _c(
+                                    "span",
+                                    {
+                                      staticClass:
+                                        "label label-sm label-warning"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                      Active\n                                    "
+                                      )
+                                    ]
+                                  )
+                                : _c(
+                                    "span",
+                                    {
+                                      staticClass: "label label-sm label-danger"
+                                    },
+                                    [
+                                      _vm._v(
+                                        "\n                                      Disactive\n                                    "
+                                      )
+                                    ]
+                                  )
                             ]
                           }
                         }
@@ -119495,6 +119596,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 exports.default = {
     mixins: [_ShortcutHelper2.default],
@@ -119512,10 +119626,11 @@ exports.default = {
                 last_name: '',
                 permissions: {},
                 roles: {},
-                is_new: false,
-                is_activated: false
+                civilities: {},
+                is_new: false
             },
             roles: {},
+            civilities: {},
             form: new _formBackendValidation2.default(),
             loading: false,
             resetEmailIsLoading: false
@@ -119576,13 +119691,20 @@ exports.default = {
                 _this3.roles = response.data.data;
             });
         },
-        sendResetEmail: function sendResetEmail() {
+        fetchCivilities: function fetchCivilities() {
             var _this4 = this;
+
+            _axios2.default.get(route('api.user.civility.all')).then(function (response) {
+                _this4.civilities = response.data.data;
+            });
+        },
+        sendResetEmail: function sendResetEmail() {
+            var _this5 = this;
 
             this.resetEmailIsLoading = true;
             _axios2.default.get(route('api.user.user.sendResetPassword', { user: this.$route.params.userId })).then(function (response) {
-                _this4.resetEmailIsLoading = false;
-                _this4.$notify.success({
+                _this5.resetEmailIsLoading = false;
+                _this5.$notify.success({
                     title: 'Success',
                     message: response.data.message
                 });
@@ -119592,6 +119714,7 @@ exports.default = {
     mounted: function mounted() {
         this.fetchUser();
         this.fetchRoles();
+        this.fetchCivilities();
     }
 };
 
@@ -119628,7 +119751,7 @@ var render = function() {
             { attrs: { separator: "/" } },
             [
               _c("el-breadcrumb-item", [
-                _c("a", { attrs: { href: "/backend" } }, [
+                _c("a", { attrs: { href: "/admin" } }, [
                   _vm._v(_vm._s(_vm.trans("core.breadcrumb.home")))
                 ])
               ]),
@@ -119829,7 +119952,57 @@ var render = function() {
                               {
                                 class: {
                                   "el-form-item is-error": _vm.form.errors.has(
-                                    "activated"
+                                    "civilities"
+                                  )
+                                },
+                                attrs: {
+                                  label: _vm.trans("users.form.civilities")
+                                }
+                              },
+                              [
+                                _c(
+                                  "el-select",
+                                  {
+                                    attrs: { placeholder: "Select" },
+                                    model: {
+                                      value: _vm.user.civilities,
+                                      callback: function($$v) {
+                                        _vm.$set(_vm.user, "civilities", $$v)
+                                      },
+                                      expression: "user.civilities"
+                                    }
+                                  },
+                                  _vm._l(_vm.civilities, function(civility) {
+                                    return _c("el-option", {
+                                      key: civility.id,
+                                      attrs: {
+                                        label: civility.nationality,
+                                        value: civility.id
+                                      }
+                                    })
+                                  })
+                                ),
+                                _vm._v(" "),
+                                _vm.form.errors.has("civilities")
+                                  ? _c("div", {
+                                      staticClass: "el-form-item__error",
+                                      domProps: {
+                                        textContent: _vm._s(
+                                          _vm.form.errors.first("civilities")
+                                        )
+                                      }
+                                    })
+                                  : _vm._e()
+                              ],
+                              1
+                            ),
+                            _vm._v(" "),
+                            _c(
+                              "el-form-item",
+                              {
+                                class: {
+                                  "el-form-item is-error": _vm.form.errors.has(
+                                    "is_activated"
                                   )
                                 },
                                 attrs: {
@@ -119851,12 +120024,12 @@ var render = function() {
                                   [_vm._v("Activated")]
                                 ),
                                 _vm._v(" "),
-                                _vm.form.errors.has("activated")
+                                _vm.form.errors.has("is_activated")
                                   ? _c("div", {
                                       staticClass: "el-form-item__error",
                                       domProps: {
                                         textContent: _vm._s(
-                                          _vm.form.errors.first("activated")
+                                          _vm.form.errors.first("is_activated")
                                         )
                                       }
                                     })
@@ -119983,12 +120156,10 @@ var render = function() {
                               {
                                 class: {
                                   "el-form-item is-error": _vm.form.errors.has(
-                                    "password"
+                                    "roles"
                                   )
                                 },
-                                attrs: {
-                                  label: _vm.trans("users.form.password")
-                                }
+                                attrs: { label: _vm.trans("users.form.roles") }
                               },
                               [
                                 _c(
@@ -120017,12 +120188,12 @@ var render = function() {
                                   })
                                 ),
                                 _vm._v(" "),
-                                _vm.form.errors.has("password")
+                                _vm.form.errors.has("roles")
                                   ? _c("div", {
                                       staticClass: "el-form-item__error",
                                       domProps: {
                                         textContent: _vm._s(
-                                          _vm.form.errors.first("password")
+                                          _vm.form.errors.first("roles")
                                         )
                                       }
                                     })
@@ -120030,30 +120201,6 @@ var render = function() {
                               ],
                               1
                             )
-                          ],
-                          1
-                        ),
-                        _vm._v(" "),
-                        _c(
-                          "el-tab-pane",
-                          {
-                            attrs: {
-                              label: _vm.trans("users.tabs.permissions")
-                            }
-                          },
-                          [
-                            _c("asgard-permissions", {
-                              attrs: {
-                                "current-permissions": _vm.user.permissions
-                              },
-                              model: {
-                                value: _vm.user.permissions,
-                                callback: function($$v) {
-                                  _vm.$set(_vm.user, "permissions", $$v)
-                                },
-                                expression: "user.permissions"
-                              }
-                            })
                           ],
                           1
                         ),

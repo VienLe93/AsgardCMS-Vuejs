@@ -25,7 +25,7 @@ class User extends EloquentUser implements UserInterface, AuthenticatableContrac
         'avatar',
         'civility_id',
         'city_id',
-        'newsletter'
+        'newsletter',
     ];
 
     /**

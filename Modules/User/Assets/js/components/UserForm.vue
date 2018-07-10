@@ -6,7 +6,7 @@
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.users.index'}">{{ trans('users.title.users') }}
                 </el-breadcrumb-item>
@@ -49,11 +49,24 @@
                                         <div class="el-form-item__error" v-if="form.errors.has('email')"
                                              v-text="form.errors.first('email')"></div>
                                     </el-form-item>
+                                    <el-form-item :label="trans('users.form.civilities')"
+                                                  :class="{'el-form-item is-error': form.errors.has('civilities') }">
+                                        <el-select v-model="user.civilities" placeholder="Select">
+                                            <el-option
+                                                    v-for="civility in civilities"
+                                                    :key="civility.id"
+                                                    :label="civility.nationality"
+                                                    :value="civility.id">
+                                            </el-option>
+                                        </el-select>
+                                        <div class="el-form-item__error" v-if="form.errors.has('civilities')"
+                                             v-text="form.errors.first('civilities')"></div>
+                                    </el-form-item>
                                     <el-form-item :label="trans('users.form.is activated')"
-                                                  :class="{'el-form-item is-error': form.errors.has('activated') }">
+                                                  :class="{'el-form-item is-error': form.errors.has('is_activated') }">
                                         <el-checkbox v-model="user.is_activated">Activated</el-checkbox>
-                                        <div class="el-form-item__error" v-if="form.errors.has('activated')"
-                                             v-text="form.errors.first('activated')"></div>
+                                        <div class="el-form-item__error" v-if="form.errors.has('is_activated')"
+                                             v-text="form.errors.first('is_activated')"></div>
                                     </el-form-item>
                                     <div v-if="user.is_new">
                                         <el-form-item :label="trans('users.form.password')"
@@ -73,8 +86,8 @@
                                     </div>
                                 </el-tab-pane>
                                 <el-tab-pane :label="trans('users.tabs.roles')">
-                                    <el-form-item :label="trans('users.form.password')"
-                                                  :class="{'el-form-item is-error': form.errors.has('password') }">
+                                    <el-form-item :label="trans('users.form.roles')"
+                                                  :class="{'el-form-item is-error': form.errors.has('roles') }">
                                         <el-select v-model="user.roles" multiple placeholder="Select">
                                             <el-option
                                                     v-for="role in roles"
@@ -83,14 +96,14 @@
                                                     :value="role.id">
                                             </el-option>
                                         </el-select>
-                                        <div class="el-form-item__error" v-if="form.errors.has('password')"
-                                             v-text="form.errors.first('password')"></div>
+                                        <div class="el-form-item__error" v-if="form.errors.has('roles')"
+                                             v-text="form.errors.first('roles')"></div>
                                     </el-form-item>
                                 </el-tab-pane>
-                                <el-tab-pane :label="trans('users.tabs.permissions')">
+                                <!-- <el-tab-pane :label="trans('users.tabs.permissions')">
                                     <asgard-permissions v-model="user.permissions"
                                                         :current-permissions="user.permissions"></asgard-permissions>
-                                </el-tab-pane>
+                                </el-tab-pane> -->
                                 <el-tab-pane :label="trans('users.tabs.new password')" v-if="! user.is_new">
                                     <div v-if="! user.is_new">
                                         <div class="col-md-6">
@@ -160,10 +173,11 @@
                     last_name: '',
                     permissions: {},
                     roles: {},
+                    civilities: {},
                     is_new: false,
-                    is_activated: false,
                 },
                 roles: {},
+                civilities: {},
                 form: new Form(),
                 loading: false,
                 resetEmailIsLoading: false,
@@ -221,6 +235,12 @@
                         this.roles = response.data.data;
                     });
             },
+            fetchCivilities() {
+                axios.get(route('api.user.civility.all'))
+                    .then((response) => {
+                        this.civilities = response.data.data;
+                    });
+            },
             sendResetEmail() {
                 this.resetEmailIsLoading = true;
                 axios.get(route('api.user.user.sendResetPassword', { user: this.$route.params.userId }))
@@ -236,6 +256,7 @@
         mounted() {
             this.fetchUser();
             this.fetchRoles();
+            this.fetchCivilities();
         },
     };
 </script>

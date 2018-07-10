@@ -6,7 +6,7 @@
             </h1>
             <el-breadcrumb separator="/">
                 <el-breadcrumb-item>
-                    <a href="/backend">{{ trans('core.breadcrumb.home') }}</a>
+                    <a href="/admin">{{ trans('core.breadcrumb.home') }}</a>
                 </el-breadcrumb-item>
                 <el-breadcrumb-item :to="{name: 'admin.user.roles.index'}">{{ trans('roles.title.roles') }}
                 </el-breadcrumb-item>
