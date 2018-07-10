@@ -18,4 +18,4 @@ composer.lock
 docker
 dcp
 docker-compose.yml
-public/app.js
+public/js/app.js

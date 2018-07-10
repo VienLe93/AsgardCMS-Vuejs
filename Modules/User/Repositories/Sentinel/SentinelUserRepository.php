@@ -148,7 +148,6 @@ class SentinelUserRepository implements UserRepository
      */
     public function updateAndSyncRoles($userId, $data, $roles)
     {
-      dd($data);
         $user = $this->user->find($userId);
 
         $this->checkForNewPassword($data);
@@ -261,7 +260,7 @@ class SentinelUserRepository implements UserRepository
      */
     private function checkForManualActivation($user, array &$data)
     {
-        if (Activation::completed($user) && !$data['activated']) {
+        if (Activation::completed($user) && !$data['is_activated']) {
             return Activation::remove($user);
         }
 
