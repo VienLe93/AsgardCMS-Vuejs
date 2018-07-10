@@ -28,7 +28,7 @@ return [
     | Define which column(s) you'd like to use to login with, currently
     | only supported by the Sentinel user driver
     */
-    'login-columns' => ['user_name'],
+    'login-columns' => ['username'],
     /*
     |--------------------------------------------------------------------------
     | Define a class that will handle User presentation
@@ -56,7 +56,7 @@ return [
     | Set the fillable user fields, those fields will be mass assigned
     */
     'fillable' => [
-        'user_name',
+        'username',
         'email',
         'password',
         'permissions',

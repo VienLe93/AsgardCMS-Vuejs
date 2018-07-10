@@ -6,6 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 
 class Civility extends Model
 {
-    protected $fillable = ['name'];
     protected $table = 'civilities';
+    protected $fillable = ['nationality'];
 }

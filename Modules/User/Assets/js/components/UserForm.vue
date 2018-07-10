@@ -49,14 +49,18 @@
                                         <div class="el-form-item__error" v-if="form.errors.has('email')"
                                              v-text="form.errors.first('email')"></div>
                                     </el-form-item>
-                                    <el-form-item :label="trans('users.form.civility')"
-                                                  :class="{'el-form-item is-error': form.errors.has('civility') }">
-                                        <el-select v-model="user.civility" filterable>
-                                            <el-option v-for="(civility, key) in civilities" :key="civility"
-                                                       :label="civility" :value="key"></el-option>
+                                    <el-form-item :label="trans('users.form.civilities')"
+                                                  :class="{'el-form-item is-error': form.errors.has('civilities') }">
+                                        <el-select v-model="user.civilities" placeholder="Select">
+                                            <el-option
+                                                    v-for="civility in civilities"
+                                                    :key="civility.id"
+                                                    :label="civility.nationality"
+                                                    :value="civility.id">
+                                            </el-option>
                                         </el-select>
-                                        <div class="el-form-item__error" v-if="form.errors.has('civility')"
-                                             v-text="form.errors.first('civility')"></div>
+                                        <div class="el-form-item__error" v-if="form.errors.has('civilities')"
+                                             v-text="form.errors.first('civilities')"></div>
                                     </el-form-item>
                                     <el-form-item :label="trans('users.form.is activated')"
                                                   :class="{'el-form-item is-error': form.errors.has('is_activated') }">
@@ -229,6 +233,12 @@
                         this.roles = response.data.data;
                     });
             },
+            fetchCivilities() {
+                axios.get(route('api.user.civility.all'))
+                    .then((response) => {
+                        this.civilities = response.data.data;
+                    });
+            },
             sendResetEmail() {
                 this.resetEmailIsLoading = true;
                 axios.get(route('api.user.user.sendResetPassword', { user: this.$route.params.userId }))
@@ -244,6 +254,7 @@
         mounted() {
             this.fetchUser();
             this.fetchRoles();
+            this.fetchCivilities();
         },
     };
 </script>

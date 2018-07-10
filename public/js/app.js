@@ -119605,6 +119605,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //
 //
 //
+//
+//
+//
+//
 
 exports.default = {
     mixins: [_ShortcutHelper2.default],
@@ -119685,13 +119689,20 @@ exports.default = {
                 _this3.roles = response.data.data;
             });
         },
-        sendResetEmail: function sendResetEmail() {
+        fetchCivilities: function fetchCivilities() {
             var _this4 = this;
+
+            _axios2.default.get(route('api.user.civility.all')).then(function (response) {
+                _this4.civilities = response.data.data;
+            });
+        },
+        sendResetEmail: function sendResetEmail() {
+            var _this5 = this;
 
             this.resetEmailIsLoading = true;
             _axios2.default.get(route('api.user.user.sendResetPassword', { user: this.$route.params.userId })).then(function (response) {
-                _this4.resetEmailIsLoading = false;
-                _this4.$notify.success({
+                _this5.resetEmailIsLoading = false;
+                _this5.$notify.success({
                     title: 'Success',
                     message: response.data.message
                 });
@@ -119701,6 +119712,7 @@ exports.default = {
     mounted: function mounted() {
         this.fetchUser();
         this.fetchRoles();
+        this.fetchCivilities();
     }
 };
 
@@ -119938,43 +119950,43 @@ var render = function() {
                               {
                                 class: {
                                   "el-form-item is-error": _vm.form.errors.has(
-                                    "civility"
+                                    "civilities"
                                   )
                                 },
                                 attrs: {
-                                  label: _vm.trans("users.form.civility")
+                                  label: _vm.trans("users.form.civilities")
                                 }
                               },
                               [
                                 _c(
                                   "el-select",
                                   {
-                                    attrs: { filterable: "" },
+                                    attrs: { placeholder: "Select" },
                                     model: {
-                                      value: _vm.user.civility,
+                                      value: _vm.user.civilities,
                                       callback: function($$v) {
-                                        _vm.$set(_vm.user, "civility", $$v)
+                                        _vm.$set(_vm.user, "civilities", $$v)
                                       },
-                                      expression: "user.civility"
+                                      expression: "user.civilities"
                                     }
                                   },
-                                  _vm._l(_vm.civilities, function(
-                                    civility,
-                                    key
-                                  ) {
+                                  _vm._l(_vm.civilities, function(civility) {
                                     return _c("el-option", {
-                                      key: civility,
-                                      attrs: { label: civility, value: key }
+                                      key: civility.id,
+                                      attrs: {
+                                        label: civility.nationality,
+                                        value: civility.id
+                                      }
                                     })
                                   })
                                 ),
                                 _vm._v(" "),
-                                _vm.form.errors.has("civility")
+                                _vm.form.errors.has("civilities")
                                   ? _c("div", {
                                       staticClass: "el-form-item__error",
                                       domProps: {
                                         textContent: _vm._s(
-                                          _vm.form.errors.first("civility")
+                                          _vm.form.errors.first("civilities")
                                         )
                                       }
                                     })

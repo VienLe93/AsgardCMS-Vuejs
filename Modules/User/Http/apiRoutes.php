@@ -122,4 +122,9 @@ $router->group(['prefix' => '/user', 'middleware' => ['api.token', 'auth.admin']
         'uses' => 'PermissionsController@index',
         'middleware' => 'token-can:user.roles.index',
     ]);
+
+    $router->get('civilities', [
+        'as' => 'api.user.civility.all',
+        'uses' => 'CivilityController@all',
+    ]);
 });

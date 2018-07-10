@@ -20,11 +20,11 @@
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
                 {!! $errors->first('email', '<span class="help-block">:message</span>') !!}
             </div> -->
-            <div class="form-group has-feedback {{ $errors->has('user_name') ? ' has-error' : '' }}">
+            <div class="form-group has-feedback {{ $errors->has('username') ? ' has-error' : '' }}">
                 <input type="text" class="form-control" autofocus
-                       name="user_name" placeholder="{{ trans('user::auth.user_name') }}" value="{{ old('user_name')}}">
+                       name="username" placeholder="{{ trans('user::auth.username') }}" value="{{ old('username')}}">
                 <span class="glyphicon glyphicon-envelope form-control-feedback"></span>
-                {!! $errors->first('user_name', '<span class="help-block">:message</span>') !!}
+                {!! $errors->first('username', '<span class="help-block">:message</span>') !!}
             </div>
             <div class="form-group has-feedback {{ $errors->has('password') ? ' has-error' : '' }}">
                 <input type="password" class="form-control"
